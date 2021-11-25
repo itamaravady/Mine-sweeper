@@ -1,0 +1,129 @@
+body {
+    background-color: rgb(172, 117, 92);
+    user-select: none;
+}
+
+.gameContainer {
+    width: 100%;
+    background-color: skyblue;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td img {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
+
+.negs {
+    position: absolute;
+    text-align: center;
+    top: 8px;
+    left: 14px;
+    z-index: 2;
+    color: rgb(22, 22, 22);
+    font-weight: 700;
+    font-size: 18pt;
+    font-family: monospace;
+}
+
+
+.cell {
+    height: 40px;
+    width: 40px;
+    border: 3px solid rgb(180, 80, 49);
+    position: relative;
+    cursor: default;
+}
+
+.status {
+    width: 33%;
+    min-width: 620px;
+    margin: auto;
+    padding: 10px;
+    display: table;
+    table-layout: fixed;
+}
+
+
+.lives, .smiley, .timer {
+    display: table-cell;
+    text-align: center;
+    background-color: slategray;
+    border: rgb(65, 65, 65) solid 2px;
+    border-collapse: collapse;
+    font-family: monospace;
+    font-size: 15pt;
+}
+
+.smiley {
+    cursor: pointer;
+}
+
+.smiley:hover {
+    background-color: rgba(112, 128, 144, 0.589);
+    border-top: tomato solid 2px;
+    border-bottom: tomato solid 2px;
+    border-left: rgba(255, 99, 71, 0) solid 2px;
+    border-right: rgba(255, 99, 71, 0) solid 2px;
+}
+
+.lvls {
+    width: 33%;
+    min-width: 487px;
+    margin: auto;
+    padding: 10px;
+    display: table;
+    table-layout: fixed;
+}
+
+.lvl1, .lvl2, .lvl3 {
+    cursor: pointer;
+    display: table-cell;
+    text-align: center;
+    background-color: slategray;
+    border: rgb(65, 65, 65) solid 2px;
+    font-family: monospace;
+    font-size: 15pt;
+    /* margin-right: calc(100%/6); */
+}
+
+.lvl1:hover, .lvl2:hover, .lvl3:hover {
+    background-color: rgba(112, 128, 144, 0.589);
+    border-top: tomato solid 2px;
+    border-bottom: tomato solid 2px;
+    border-left: rgba(255, 99, 71, 0) solid 2px;
+    border-right: rgba(255, 99, 71, 0) solid 2px;
+}
+
+.undo {
+    position: relative;
+    left: 10px;
+    top: -10px;
+    text-align: center;
+    display: inline-block;
+    background-color: rgb(109, 109, 109);
+    border: rgb(66, 66, 66) dashed 3px;
+    width: 90px;
+    height: 40px;
+    line-height: 2;
+    font-family: monospace;
+    font-size: 15pt;
+    border-radius: 20px;
+}
+
+.active {
+    cursor: pointer;
+    background-color: tomato;
+}
+
+.active:hover {
+    font-size: 18pt;
+    line-height: 1.5;
+    background-color: rgba(255, 99, 71, 0.726);
+}

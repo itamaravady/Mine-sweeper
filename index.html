@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Sweeper!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="initGame()">
+    <div class="gameContainer">
+        <div class="status">
+            <span class="lives"></span>
+            <span class="smiley" onclick="initGame()"></span>
+            <span class="timer">
+                Time: <span class="currTime">0</span>,
+                Best: <span class="bestTime"></span>
+            </span>
+        </div>
+        <div class="lvls">
+            <div class="lvl1" onclick="updateLevel(4,2)">Beginner</div>
+            <div class="lvl2" onclick="updateLevel(8,12)">Medium</div>
+            <div class="lvl3" onclick="updateLevel(12,30)">Expert</div>
+        </div>
+        <div class="minesBoard">
+            //here comes the mines
+        </div>
+        <div class="undo" onclick="undoStep()">Undo</div>
+    </div>
+
+
+
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
