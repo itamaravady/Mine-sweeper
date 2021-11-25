@@ -384,19 +384,17 @@ function updateBestScore() {
         case 4:
             var bestTime = localStorage.getItem('begginer');
             var currTime = +document.querySelector('.currTime').innerText;
-            console.log(currTime);
-            console.log(bestTime);
-            if (currTime < bestTime) localStorage.setItem("begginer", currTime);
+            if (currTime < bestTime || bestTime === null) localStorage.setItem("begginer", currTime);
             break;
         case 8:
             var bestTime = localStorage.getItem('medium');
             var elCurrTime = +document.querySelector('.currTime');
-            if (currTime < bestTime) localStorage.setItem("medium", currTime);
+            if (currTime < bestTime || bestTime === null) localStorage.setItem("medium", currTime);
             break;
         case 12:
             var bestTime = localStorage.getItem('expert');
             var elCurrTime = +document.querySelector('.currTime');
-            if (currTime < bestTime) localStorage.setItem("expert", currTime);
+            if (currTime < bestTime || bestTime === null) localStorage.setItem("expert", currTime);
             break;
     }
 }
