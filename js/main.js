@@ -1,8 +1,8 @@
 'use strict'
 
 //consts
-const MINE = `<img src="img/bomb1.png">`;
-const DISARMED = `<img src="img/disarmed.png">`;
+const MINE = `<img src="img/BOMB1.png">`;
+const DISARMED = `<img src="img/DISARMED.png">`;
 const FLAG = '<img src="img/grassFlag.png">';
 const NOT_CLICKED = '<img src="img/grass.png">';
 const EMPTY = '<img src="img/empty.png">';
