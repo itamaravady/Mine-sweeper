@@ -257,6 +257,8 @@ function cellClicked(elCell, i, j, isRightBtn) {
         gGame.isfirstClick = false;
         document.querySelector('.hintBtn').classList.add('active');
         document.querySelector('.safeBtn').classList.add('active');
+        document.querySelector('.manualMinesBtn').classList.remove('active');
+        document.querySelector('.svnBoomBtn').classList.remove('active');
         //decide on placing mines
         if (gIsSvnBoom) {
             gLevel.MODIFIED_MINES = placeMinesSvnBoom();
