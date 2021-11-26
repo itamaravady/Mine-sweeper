@@ -3,20 +3,35 @@ body {
     user-select: none;
 }
 
+.logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .gameContainer {
-    width: 100%;
+    min-width: 1350px;
+    min-height: 350px;
+    position: absolute;
+    top: 100px;
     background-color: skyblue;
+    cursor: url('/cursor/pickaxe.cur'), auto;
 }
 
 table {
     border-collapse: collapse;
     margin: auto;
+    background-color: rgb(180, 80, 49);
+
+
 }
+
 
 td img {
     position: absolute;
     top: 1px;
     left: 1px;
+    cursor: url('/cursor/pickaxe.cur'), auto;
 }
 
 
@@ -36,14 +51,13 @@ td img {
 .cell {
     height: 40px;
     width: 40px;
-    border: 3px solid rgb(180, 80, 49);
     position: relative;
     cursor: default;
 }
 
 .status {
     width: 33%;
-    min-width: 620px;
+    min-width: 660px;
     margin: auto;
     padding: 10px;
     display: table;
@@ -55,7 +69,7 @@ td img {
     display: table-cell;
     text-align: center;
     background-color: slategray;
-    border: rgb(65, 65, 65) solid 2px;
+    border-bottom: rgb(65, 65, 65) solid 2px;
     border-collapse: collapse;
     font-family: monospace;
     font-size: 15pt;
@@ -63,11 +77,11 @@ td img {
 
 .smiley {
     cursor: pointer;
+    background-color: white;
 }
 
 .smiley:hover {
-    background-color: rgba(112, 128, 144, 0.589);
-    border-top: tomato solid 2px;
+    background-color: rgba(255, 255, 255, 0.616);
     border-bottom: tomato solid 2px;
     border-left: rgba(255, 99, 71, 0) solid 2px;
     border-right: rgba(255, 99, 71, 0) solid 2px;
@@ -87,15 +101,13 @@ td img {
     display: table-cell;
     text-align: center;
     background-color: slategray;
-    border: rgb(65, 65, 65) solid 2px;
+    border-bottom: rgb(65, 65, 65) solid 2px;
     font-family: monospace;
     font-size: 15pt;
-    /* margin-right: calc(100%/6); */
 }
 
 .lvl1:hover, .lvl2:hover, .lvl3:hover {
     background-color: rgba(112, 128, 144, 0.589);
-    border-top: tomato solid 2px;
     border-bottom: tomato solid 2px;
     border-left: rgba(255, 99, 71, 0) solid 2px;
     border-right: rgba(255, 99, 71, 0) solid 2px;
@@ -110,11 +122,50 @@ td img {
     background-color: rgb(109, 109, 109);
     border: rgb(66, 66, 66) dashed 3px;
     width: 90px;
-    height: 40px;
-    line-height: 2;
+    height: 30px;
+    line-height: 1.5;
     font-family: monospace;
     font-size: 15pt;
     border-radius: 20px;
+}
+
+
+.hintBtn, .safeBtn, .manualMinesBtn, .svnBoomBtn {
+    position: absolute;
+    display: inline-block;
+    background-color: rgb(109, 109, 109);
+    border: rgb(66, 66, 66) dashed 3px;
+    width: 130px;
+    height: 40px;
+    line-height: 1.5;
+    font-family: monospace;
+    font-size: 15pt;
+    border-radius: 20px;
+}
+
+.hintBtn {
+    left: 16%;
+    top: 30%;
+}
+
+.safeBtn {
+    left: 16%;
+    top: 45%;
+}
+
+
+.manualMinesBtn {
+    height: 60px;
+    left: 5%;
+    top: 30%;
+    line-height: 1;
+}
+
+.svnBoomBtn {
+    height: 60px;
+    left: 5%;
+    top: 50%;
+    line-height: 1;
 }
 
 .active {
@@ -122,8 +173,18 @@ td img {
     background-color: tomato;
 }
 
+.manualMinesBtn.active, .svnBoomBtn.active {
+    background-color: khaki;
+}
+
 .active:hover {
-    font-size: 18pt;
-    line-height: 1.5;
+    font-size: 17pt;
+    line-height: 1;
     background-color: rgba(255, 99, 71, 0.726);
+}
+
+.manualMinesBtn.active:hover, .svnBoomBtn.active:hover {
+    font-size: 17pt;
+    line-height: 1;
+    background-color: rgba(240, 230, 140, 0.726);
 }

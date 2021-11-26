@@ -10,6 +10,9 @@
 </head>
 
 <body onload="initGame()">
+    <div class="logo">
+        <img src="img/logo.png" alt="">
+    </div>
     <div class="gameContainer">
         <div class="status">
             <span class="lives"></span>
@@ -27,6 +30,18 @@
         <div class="minesBoard">
             //here comes the mines
         </div>
+        <button class="hintBtn" onclick="if(!gIsHintInProgress) gIsShowHint=true;">Hints: <span></span></button>
+        <button class="safeBtn" onclick="if(gSafesCount) safeClick();">Safes: <span></span></button>
+        <button class="manualMinesBtn" onclick="if(gGame.isfirstClick&&!gIsSvnBoom){
+                gPlacingMines=true;
+                gIsManualMode=true;
+                document.querySelector('.svnBoomBtn').classList.remove('active');
+                }">Manual
+            Mode</button>
+        <button class="svnBoomBtn" onclick="if(gGame.isfirstClick&&!gPlacingMines&&!gIsManualMode){
+                gIsSvnBoom=true;
+                document.querySelector('.manualMinesBtn').classList.remove('active');
+                }">7 Boom!</button>
         <div class="undo" onclick="undoStep()">Undo</div>
     </div>
 
