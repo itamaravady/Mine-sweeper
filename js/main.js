@@ -6,11 +6,11 @@ const DISARMED = `<img src="img/DISARMED.png">`;
 const FLAG = '<img src="img/grassFlag.png">';
 const NOT_CLICKED = '<img src="img/grass.png">';
 const EMPTY = '<img src="img/empty.png">';
+const SAFE = '<img src="img/safe.png">';
 const SMILEY = '🙂';
 const FEAR_SMILEY = '😮';
 const WIN_SMILEY = '😎';
 const LOSE_SMILEY = '😵';
-const SAFE = '<img src="img/safe.png">';
 
 
 //globals----------------------------------
@@ -92,6 +92,7 @@ function resetGame() {
     gPlacingMines = false;
     gBoardSnapshots = [];
     gSnapshotIdx = 0;
+    gIsSvnBoom = false;
     clearInterval(gIntervalId);
 
     resetBtnAndStats();
