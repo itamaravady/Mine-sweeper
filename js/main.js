@@ -127,11 +127,9 @@ function placeMinesManualy(cell) {
 
     if (gManualMinesCount === gLevel.MINES) {
         gPlacingMines = false;
-        setTimeout(() => {
-            hideAllMines();
-            document.querySelector('.manualMinesBtn').classList.remove('active');
-            renderBoard(gBoard);
-        }, 1000);
+        hideAllMines();
+        document.querySelector('.manualMinesBtn').classList.remove('active');
+        renderBoard(gBoard);
     }
 }
 
@@ -260,6 +258,7 @@ function cellClicked(elCell, i, j, isRightBtn) {
         document.querySelector('.safeBtn').classList.add('active');
         document.querySelector('.manualMinesBtn').classList.remove('active');
         document.querySelector('.svnBoomBtn').classList.remove('active');
+
         //decide on placing mines
         if (gIsSvnBoom) {
             gLevel.MODIFIED_MINES = placeMinesSvnBoom();
